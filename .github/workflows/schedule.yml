@@ -26,6 +26,6 @@ jobs:
       run: |
         python -m savetify.main
     - uses: actions/upload-artifact@v2
-    with:
+      with:
         name: data
         path: data.json
