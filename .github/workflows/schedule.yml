@@ -3,7 +3,7 @@ name: Save Spotify user tracks
 on: [push]
 
 jobs:
-  build:
+  run:
 
     runs-on: ubuntu-latest
     strategy:
@@ -25,3 +25,7 @@ jobs:
         API_TOKEN : ${{ secrets.API_TOKEN }}
       run: |
         python -m savetify.main
+    - uses: actions/upload-artifact@v2
+    with:
+        name: data
+        path: data.json
