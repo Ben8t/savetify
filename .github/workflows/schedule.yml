@@ -1,8 +1,9 @@
 name: Save Spotify user tracks
 
 on:
+  push
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   run:
